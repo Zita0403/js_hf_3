@@ -32,7 +32,7 @@ document.body.children[1].children[2].appendChild(thirdDiv);
 
 let blueSquare = document.querySelector(".blue-square");
 
-blueSquare.onclick = function(){
+blueSquare.onclick = function() {
     blueSquare.classList.add("slide");
 }
 
@@ -46,17 +46,6 @@ let fourtDiv2 = document.createElement("div");
 fourtDiv2.className = "yellow-square";
 console.log(fourtDiv2);
 document.body.children[1].children[3].appendChild(fourtDiv2);
-
-// fourtDiv1.onclick = function(){
-//     fourtDiv2.classList.add("visible");
-//     if(fourtDiv2.classList.contains == "visible"){
-//         fourtDiv2.classList.remove("visible");
-//         fourtDiv2.classList.add("hidden");
-//     } else {
-//         fourtDiv2.classList.add("visible");
-//         fourtDiv2.classList.remove("hidden");
-//     }
-// }
 
 fourtDiv1.onclick = function(){
     fourtDiv2.classList.toggle("hidden");

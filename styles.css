@@ -5,7 +5,7 @@ body {
     grid: 
         "header-area" 400px
         "main-area" auto
-        / 100%;
+        / 1fr;
 }
 
 header {
@@ -61,22 +61,24 @@ main section:nth-child(even) {
     transition-delay: 2s;
 }
 
-main section:nth-child(3) {
-    position: relative;
-}
-
 .blue-square {
     width: 40px;
     height: 40px;
     background-color: blue;
-    position: absolute; 
-    top: 80px;
-    left: 100px;
-    transition: transform 1s ease-out;
+    position: relative;
 }
 
 .slide {
-    transform: translateX(calc(100% - 140px));
+    animation: slide-right 2s ease-in-out forwards;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(100vw - 60px)); 
+    }
 }
 
 .yellow-square {
